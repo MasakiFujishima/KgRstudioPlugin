@@ -255,7 +255,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="KgRstudioApplication.cs" />
     <Compile Include="KgRstudioPlugin.cs" />
-    <Compile Include="Helpers\PluginLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="metadata\LoupedeckPackage.yaml" />

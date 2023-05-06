@@ -10,7 +10,7 @@ namespace Loupedeck.KgRstudioPlugin
         public override Boolean UsesApplicationApiOnly => false;
 
         // Gets a value indicating whether this is an API-only plugin.
-        //public override Boolean HasNoApplication => false;
+        public override Boolean HasNoApplication => false;
 
         //public KgRstudioPlugin() => PluginLog.Init(this.Log);
 

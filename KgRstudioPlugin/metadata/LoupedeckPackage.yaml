@@ -11,7 +11,7 @@ licenseUrl: https://opensource.org/licenses/MIT
 homePageUrl: https://www.karada-good.net
 supportPageUrl: https://www.karada-good.net/analyticsr/r-774/
 
-pluginFileName: KG_RStudioPlugin.dll
+pluginFileName: KgRstudioPlugin.dll
 pluginFolderWin: win
 
 supportedDevices:

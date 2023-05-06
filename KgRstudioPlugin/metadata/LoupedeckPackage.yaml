@@ -1,0 +1,18 @@
+type: plugin4
+name: KG_RStudio
+displayName: KG_RStudio
+version: 1.0
+
+author: Masaki Fujishima
+copyright: Copyright © 2023 KARADA GOOD. All rights reserved.
+license: MIT
+licenseUrl: https://opensource.org/licenses/MIT
+
+homePageUrl: https://www.karada-good.net
+supportPageUrl: https://www.karada-good.net/analyticsr/r-774/
+
+pluginFileName: KG_RStudioPlugin.dll
+pluginFolderWin: win
+
+supportedDevices:
+    - LoupedeckCtFamily

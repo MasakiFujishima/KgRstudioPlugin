@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6CDA998-7D04-4A2F-9BCF-C7A554D0D2D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loupedeck.KgRstudioPlugin</RootNamespace>
+    <AssemblyName>KgRstudioPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>$(SolutionDir)..\obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)..\bin\</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath Condition="$(OS) == 'Windows_NT'">$(LocalAppData)\Loupedeck\Plugins\KgRstudio\win\</OutputPath>
+    <OutputPath Condition="$(OS) != 'Windows_NT'">$(HOME)/.local/share/Loupedeck/Plugins/KgRstudio/mac/</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath Condition="$(OS) == 'Windows_NT'">$(BaseOutputPath)$(Configuration)\win\</OutputPath>
+    <OutputPath Condition="$(OS) != 'Windows_NT'">$(BaseOutputPath)$(Configuration)/mac/</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PluginApi, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="$(OS) == 'Windows_NT'">C:\Program Files (x86)\Loupedeck\Loupedeck2\PluginApi.dll</HintPath>
+      <HintPath Condition="$(OS) != 'Windows_NT'">/Applications/Loupedeck.app/Contents/MonoBundle/PluginApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\Accept Selected Candidate.cs" />
+    <Compile Include="Actions\Add Cursor Above Current Cursor.cs" />
+    <Compile Include="Actions\Add Cursor Below Current Cursor.cs" />
+    <Compile Include="Actions\Add Source Column.cs" />
+    <Compile Include="Actions\Attempt Completion.cs" />
+    <Compile Include="Actions\Build And Reload.cs" />
+    <Compile Include="Actions\Build Menu.cs" />
+    <Compile Include="Actions\Change Working Directory.cs" />
+    <Compile Include="Actions\Check Package.cs" />
+    <Compile Include="Actions\Check Spelling.cs" />
+    <Compile Include="Actions\Clear Console.cs" />
+    <Compile Include="Actions\Close Active Document Chrome Only.cs" />
+    <Compile Include="Actions\Close Active Document Except On Chrome.cs" />
+    <Compile Include="Actions\Close All Open Documents.cs" />
+    <Compile Include="Actions\Close Other Documents.cs" />
+    <Compile Include="Actions\Code Menu.cs" />
+    <Compile Include="Actions\Comment Uncomment Current Line Selection.cs" />
+    <Compile Include="Actions\Commit Changes.cs" />
+    <Compile Include="Actions\Compile Notebook.cs" />
+    <Compile Include="Actions\Compile Pdf Tex And Sweave.cs" />
+    <Compile Include="Actions\Continue.cs" />
+    <Compile Include="Actions\Copy Lines Down.cs" />
+    <Compile Include="Actions\Copy Lines Up.cs" />
+    <Compile Include="Actions\Copy.cs" />
+    <Compile Include="Actions\Cut.cs" />
+    <Compile Include="Actions\Debug Menu.cs" />
+    <Compile Include="Actions\Delete Line.cs" />
+    <Compile Include="Actions\Diff Active Source Document.cs" />
+    <Compile Include="Actions\Dismiss Completion Popup.cs" />
+    <Compile Include="Actions\Document Package.cs" />
+    <Compile Include="Actions\Edit Lines From Start.cs" />
+    <Compile Include="Actions\Edit Menu.cs" />
+    <Compile Include="Actions\Execute Next Line.cs" />
+    <Compile Include="Actions\Expand Selection.cs" />
+    <Compile Include="Actions\Expand To Matching Brace Paren.cs" />
+    <Compile Include="Actions\Extract Function From Selection.cs" />
+    <Compile Include="Actions\Extract Variable From Selection.cs" />
+    <Compile Include="Actions\File Menu.cs" />
+    <Compile Include="Actions\Find And Replace.cs" />
+    <Compile Include="Actions\Find In Files.cs" />
+    <Compile Include="Actions\Find In Help Topic.cs" />
+    <Compile Include="Actions\Find Next.cs" />
+    <Compile Include="Actions\Find Previous.cs" />
+    <Compile Include="Actions\Find Usages For Symbol At Cursor C.cs" />
+    <Compile Include="Actions\Finish Function Loop.cs" />
+    <Compile Include="Actions\First Tab.cs" />
+    <Compile Include="Actions\Focus Console Output.cs" />
+    <Compile Include="Actions\Focus Main Toolbar.cs" />
+    <Compile Include="Actions\Focus Next Pane.cs" />
+    <Compile Include="Actions\Focus Previous Pane.cs" />
+    <Compile Include="Actions\Fold All.cs" />
+    <Compile Include="Actions\Fold Selected.cs" />
+    <Compile Include="Actions\Go To File Function.cs" />
+    <Compile Include="Actions\Go To Line.cs" />
+    <Compile Include="Actions\Help Menu.cs" />
+    <Compile Include="Actions\Indent.cs" />
+    <Compile Include="Actions\Insert Assignment Operator.cs" />
+    <Compile Include="Actions\Insert Chunk Sweave And Knitr.cs" />
+    <Compile Include="Actions\Insert Code Section.cs" />
+    <Compile Include="Actions\Insert Currently Yanked Text.cs" />
+    <Compile Include="Actions\Insert Pipe Operator.cs" />
+    <Compile Include="Actions\Insert Roxygen Skeleton.cs" />
+    <Compile Include="Actions\Interrupt Currently Executing Command.cs" />
+    <Compile Include="Actions\Jump To End.cs" />
+    <Compile Include="Actions\Jump To Matching Brace Paren.cs" />
+    <Compile Include="Actions\Jump To Start.cs" />
+    <Compile Include="Actions\Jump To Word Left.cs" />
+    <Compile Include="Actions\Jump To Word Right.cs" />
+    <Compile Include="Actions\Jump To.cs" />
+    <Compile Include="Actions\Knit Document Knitr.cs" />
+    <Compile Include="Actions\Last Tab.cs" />
+    <Compile Include="Actions\Load All Devtools.cs" />
+    <Compile Include="Actions\Move Active Cursor Down.cs" />
+    <Compile Include="Actions\Move Active Cursor Up.cs" />
+    <Compile Include="Actions\Move Cursor To Beginning Of Line.cs" />
+    <Compile Include="Actions\Move Cursor To Console.cs" />
+    <Compile Include="Actions\Move Cursor To End Of Line.cs" />
+    <Compile Include="Actions\Move Cursor To Source Editor.cs" />
+    <Compile Include="Actions\Move Focus To Console.cs" />
+    <Compile Include="Actions\Move Focus To Help.cs" />
+    <Compile Include="Actions\Move Focus To Source Editor.cs" />
+    <Compile Include="Actions\Move Focus To Terminal.cs" />
+    <Compile Include="Actions\Move Lines Down.cs" />
+    <Compile Include="Actions\Move Lines Up.cs" />
+    <Compile Include="Actions\Navigate Back.cs" />
+    <Compile Include="Actions\Navigate Candidates Down.cs" />
+    <Compile Include="Actions\Navigate Candidates Up.cs" />
+    <Compile Include="Actions\Navigate Forward.cs" />
+    <Compile Include="Actions\New Document Chrome Only.cs" />
+    <Compile Include="Actions\New Document Except On Chrome Windows.cs" />
+    <Compile Include="Actions\New Terminal.cs" />
+    <Compile Include="Actions\Next Help Topic.cs" />
+    <Compile Include="Actions\Next Plot.cs" />
+    <Compile Include="Actions\Next Section.cs" />
+    <Compile Include="Actions\Next Tab Desktop.cs" />
+    <Compile Include="Actions\Next Tab.cs" />
+    <Compile Include="Actions\Next Terminal.cs" />
+    <Compile Include="Actions\Open Document.cs" />
+    <Compile Include="Actions\Outdent.cs" />
+    <Compile Include="Actions\Paste.cs" />
+    <Compile Include="Actions\Plots Menu.cs" />
+    <Compile Include="Actions\Popup Command History.cs" />
+    <Compile Include="Actions\Preview Html Markdown And Html.cs" />
+    <Compile Include="Actions\Previous Help Topic.cs" />
+    <Compile Include="Actions\Previous Plot.cs" />
+    <Compile Include="Actions\Previous Section.cs" />
+    <Compile Include="Actions\Previous Tab Desktop.cs" />
+    <Compile Include="Actions\Previous Tab.cs" />
+    <Compile Include="Actions\Previous Terminal.cs" />
+    <Compile Include="Actions\Profile Menu.cs" />
+    <Compile Include="Actions\Quit Session Desktop Only.cs" />
+    <Compile Include="Actions\Redo.cs" />
+    <Compile Include="Actions\Reflow Comment.cs" />
+    <Compile Include="Actions\Reformat Selection.cs" />
+    <Compile Include="Actions\Reindent Lines.cs" />
+    <Compile Include="Actions\Rename Symbol In Scope.cs" />
+    <Compile Include="Actions\Replace And Find.cs" />
+    <Compile Include="Actions\Rerun Previous Region.cs" />
+    <Compile Include="Actions\Restart R Session.cs" />
+    <Compile Include="Actions\Run Current Document.cs" />
+    <Compile Include="Actions\Run Current Line Selection Retain Cursor Position.cs" />
+    <Compile Include="Actions\Run Current Line Selection.cs" />
+    <Compile Include="Actions\Run From Current Line To Document End.cs" />
+    <Compile Include="Actions\Run From Document Beginning To Current Line.cs" />
+    <Compile Include="Actions\Run Previous Sweave Rmd Code.cs" />
+    <Compile Include="Actions\Run The Current Code Section.cs" />
+    <Compile Include="Actions\Run The Current Function Definition.cs" />
+    <Compile Include="Actions\Run The Current Sweave Rmd Chunk.cs" />
+    <Compile Include="Actions\Run The Next Sweave Rmd Chunk.cs" />
+    <Compile Include="Actions\Save Active Document.cs" />
+    <Compile Include="Actions\Save All Documents.cs" />
+    <Compile Include="Actions\Scroll Diff View Down.cs" />
+    <Compile Include="Actions\Scroll Diff View Up.cs" />
+    <Compile Include="Actions\Search R Help.cs" />
+    <Compile Include="Actions\Select All.cs" />
+    <Compile Include="Actions\Select Page Down.cs" />
+    <Compile Include="Actions\Select Page Up.cs" />
+    <Compile Include="Actions\Select To End.cs" />
+    <Compile Include="Actions\Select To Line End.cs" />
+    <Compile Include="Actions\Select To Line Start.cs" />
+    <Compile Include="Actions\Select To Start.cs" />
+    <Compile Include="Actions\Select Word Left.cs" />
+    <Compile Include="Actions\Select Word Right.cs" />
+    <Compile Include="Actions\Send Current Line Selection To Terminal.cs" />
+    <Compile Include="Actions\Session Menu.cs" />
+    <Compile Include="Actions\Show Build.cs" />
+    <Compile Include="Actions\Show Command Palette.cs" />
+    <Compile Include="Actions\Show Connections.cs" />
+    <Compile Include="Actions\Show Diagnostics.cs" />
+    <Compile Include="Actions\Show Environment.cs" />
+    <Compile Include="Actions\Show Files.cs" />
+    <Compile Include="Actions\Show Find In Files Results.cs" />
+    <Compile Include="Actions\Show Git Svn.cs" />
+    <Compile Include="Actions\Show Help For Function At Cursor.cs" />
+    <Compile Include="Actions\Show History.cs" />
+    <Compile Include="Actions\Show Keyboard Shortcut Reference.cs" />
+    <Compile Include="Actions\Show Packages.cs" />
+    <Compile Include="Actions\Show Plots.cs" />
+    <Compile Include="Actions\Show Source Code For Function At Cursor.cs" />
+    <Compile Include="Actions\Show Viewer.cs" />
+    <Compile Include="Actions\Shrink Selection.cs" />
+    <Compile Include="Actions\Source A File.cs" />
+    <Compile Include="Actions\Source The Current Document With Echo.cs" />
+    <Compile Include="Actions\Source The Current Document.cs" />
+    <Compile Include="Actions\Speak Text Editor Location.cs" />
+    <Compile Include="Actions\Split Into Lines.cs" />
+    <Compile Include="Actions\Stage Unstage And Move To Next Git.cs" />
+    <Compile Include="Actions\Stage Unstage Git.cs" />
+    <Compile Include="Actions\Step Into Function.cs" />
+    <Compile Include="Actions\Stop Debugging.cs" />
+    <Compile Include="Actions\Switch To Tab.cs" />
+    <Compile Include="Actions\Sync Editor   Pdf Preview.cs" />
+    <Compile Include="Actions\Test Package Desktop.cs" />
+    <Compile Include="Actions\Test Package Web.cs" />
+    <Compile Include="Actions\Toggle Breakpoint.cs" />
+    <Compile Include="Actions\Toggle Document Outline.cs" />
+    <Compile Include="Actions\Toggle Screen Reader Support.cs" />
+    <Compile Include="Actions\Toggle Tab Key Always Moves Focus.cs" />
+    <Compile Include="Actions\Toggle Visual Editor.cs" />
+    <Compile Include="Actions\Tools Menu.cs" />
+    <Compile Include="Actions\Undo.cs" />
+    <Compile Include="Actions\Unfold All.cs" />
+    <Compile Include="Actions\Unfold Selected.cs" />
+    <Compile Include="Actions\Use Selection For Find.cs" />
+    <Compile Include="Actions\View Menu.cs" />
+    <Compile Include="Actions\Yank Line After Cursor.cs" />
+    <Compile Include="Actions\Yank Line Up To Cursor.cs" />
+    <Compile Include="Actions\Zoom Build.cs" />
+    <Compile Include="Actions\Zoom Connections.cs" />
+    <Compile Include="Actions\Zoom Console.cs" />
+    <Compile Include="Actions\Zoom Environment.cs" />
+    <Compile Include="Actions\Zoom Files.cs" />
+    <Compile Include="Actions\Zoom Git Svn.cs" />
+    <Compile Include="Actions\Zoom Help.cs" />
+    <Compile Include="Actions\Zoom History.cs" />
+    <Compile Include="Actions\Zoom Packages.cs" />
+    <Compile Include="Actions\Zoom Plots.cs" />
+    <Compile Include="Actions\Zoom Source Editor.cs" />
+    <Compile Include="Actions\Zoom Tutorial.cs" />
+    <Compile Include="Actions\Zoom Viewer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="KgRstudioApplication.cs" />
+    <Compile Include="KgRstudioPlugin.cs" />
+    <Compile Include="Helpers\PluginLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="metadata\LoupedeckPackage.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="metadata\Icon16x16.png" />
+    <Content Include="metadata\Icon256x256.png" />
+    <Content Include="metadata\Icon32x32.png" />
+    <Content Include="metadata\Icon48x48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent Condition="$(OS) == 'Windows_NT'">call "$(ProjectDir)BuildEvents\postbuild.cmd" "$(ProjectDir)" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent Condition="$(OS) != 'Windows_NT'">sh "$(ProjectDir)BuildEvents\postbuild" "$(ProjectDir)" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -14,9 +14,9 @@ namespace Loupedeck.KgRstudioPlugin
         protected override String GetProcessName() => "RStudio";
 
         // This method can be used to link the plugin to a macOS application.
-        protected override String GetBundleName() => "";
+        // protected override String GetBundleName() => "";
 
         // This method can be used to check whether the application is installed or not.
-        public override ClientApplicationStatus GetApplicationStatus() => ClientApplicationStatus.Unknown;
+        // public override ClientApplicationStatus GetApplicationStatus() => ClientApplicationStatus.Unknown;
     }
 }

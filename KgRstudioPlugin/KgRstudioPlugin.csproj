@@ -269,6 +269,20 @@
     <Content Include="metadata\Icon256x256.png" />
     <Content Include="metadata\Icon32x32.png" />
     <Content Include="metadata\Icon48x48.png" />
+    <Content Include="Resours\Accessibility.png" />
+    <Content Include="Resours\Build.png" />
+    <Content Include="Resours\Completions %28Console and Source%29.png" />
+    <Content Include="Resours\Console.png" />
+    <Content Include="Resours\Debug.png" />
+    <Content Include="Resours\Editing %28Console and Source%29.png" />
+    <Content Include="Resours\Git_SVN.png" />
+    <Content Include="Resours\Help.png" />
+    <Content Include="Resours\Main Menu %28Server%29.png" />
+    <Content Include="Resours\Plots.png" />
+    <Content Include="Resours\Session.png" />
+    <Content Include="Resours\Source.png" />
+    <Content Include="Resours\Terminal.png" />
+    <Content Include="Resours\Views.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

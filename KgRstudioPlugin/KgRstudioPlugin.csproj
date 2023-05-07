@@ -76,6 +76,7 @@
     <Compile Include="Actions\Copy Lines Down.cs" />
     <Compile Include="Actions\Copy Lines Up.cs" />
     <Compile Include="Actions\Copy.cs" />
+    <Compile Include="Actions\Create original new R script.cs" />
     <Compile Include="Actions\Cut.cs" />
     <Compile Include="Actions\Debug Menu.cs" />
     <Compile Include="Actions\Delete Line.cs" />

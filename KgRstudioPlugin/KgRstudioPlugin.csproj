@@ -258,7 +258,6 @@
     <Compile Include="KgRstudioPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="KgRstudio_1_1.lplug4" />
     <None Include="metadata\LoupedeckPackage.yaml" />
   </ItemGroup>
   <ItemGroup>
